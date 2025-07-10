@@ -1,0 +1,35 @@
+package oops;
+abstract class appliance{
+    abstract void turnon();
+    abstract void turnoff();
+}
+class fan extends appliance{
+    @Override
+    void turnon(){
+        System.out.println("the fan has turned on.");
+    }
+    @Override
+    void turnoff(){
+        System.out.println("the fan has turned off.");
+    }
+}
+class tv extends appliance{
+    @Override
+    void turnon(){
+        System.out.println("the tv has turned on.");
+    }
+    @Override
+    void turnoff(){
+        System.out.println("the tv has turned off.");
+    }
+}
+public class abstractionappliance {
+    public static void main(String[] args) {
+        appliance tv=new tv();
+        appliance fan=new fan();
+        fan.turnon();
+        fan.turnoff();
+        tv.turnon();
+        tv.turnoff();
+    }
+}
