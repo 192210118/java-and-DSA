@@ -1,0 +1,25 @@
+package oops;
+
+public class polymorphismstring {
+    public int add(int a,int b){
+        System.out.println("the sum of two numbers:");
+        return a+b;
+    }
+    public double add(double a,double b){
+        System.out.println("the product of two numbers:");
+        return a*b;
+    }
+    public String add(String a,String b){
+        System.out.println("concanetated Strings:");
+        return a+b;
+    }
+
+    public static void main(String[] args) {
+        polymorphismstring sc=new polymorphismstring();
+        System.out.println(sc.add(2,5));
+        System.out.println(sc.add(2.34,2.35));
+        System.out.println(sc.add("hello","world"));
+
+    }
+
+}
