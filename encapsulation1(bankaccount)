@@ -1,0 +1,38 @@
+package oops;
+
+public class bankaccount {
+    private String accountnumber;
+    private String accountname;
+    private double balance;
+
+    public bankaccount(String accountnumber, String accountname, double balance) {
+        this.accountnumber = accountnumber;
+        this.accountname = accountname;
+        this.balance = balance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance = balance + amount;
+            System.out.println("amount deposited successfully:" + amount);
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && balance >= amount) {
+            balance = balance - amount;
+            System.out.println("amount withdraw successfully:" + amount);
+        }
+    }
+        public static void main(String[] args) {
+            bankaccount account = new bankaccount("ABC1234", "swapna", 1000);
+            account.deposit(1000);
+            System.out.println("balance:" +account.balance);
+        }
+}
+
+
