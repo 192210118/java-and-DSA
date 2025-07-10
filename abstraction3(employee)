@@ -1,0 +1,24 @@
+package oops;
+abstract class employee{
+    abstract void calculatesalary();
+}
+class  fulltimeemployee extends employee{
+    @Override
+    void calculatesalary(){
+        System.out.println("calculating salary for fulltime employee.");
+    }
+}
+class parttimeemployee extends employee{
+    @Override
+    void calculatesalary(){
+        System.out.println("calculating salary for half time employee.");
+    }
+}
+public class abstractionemployee {
+    public static void main(String[] args) {
+        employee full=new fulltimeemployee();
+        employee part=new parttimeemployee();
+        full.calculatesalary();
+        part.calculatesalary();
+    }
+}
