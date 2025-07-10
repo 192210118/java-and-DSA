@@ -1,0 +1,27 @@
+package oops;
+
+import java.sql.SQLOutput;
+
+interface flyable{
+    void fly();
+}
+class bird implements flyable{
+    @Override
+    public void fly() {
+        System.out.println("Bird is flying in the sky.");
+    }
+}
+class aeroplane implements flyable{
+    @Override
+    public void fly() {
+        System.out.println("aeroplane is flying in the sky");
+    }
+}
+public class interfacebird {
+    public static void main(String[] args) {
+        flyable a=new bird();
+        flyable b=new aeroplane();
+        a.fly();
+        b.fly();
+    }
+}
