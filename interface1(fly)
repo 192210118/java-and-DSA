@@ -1,6 +1,6 @@
 package oops;
 
-import java.sql.SQLOutput;
+import java.sql.*;
 
 interface flyable{
     void fly();
