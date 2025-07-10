@@ -1,0 +1,33 @@
+package oops;
+
+public class product {
+    private String productName;
+    private double price;
+    public product(String productName, double price) {
+        this.productName = productName;
+        setPrice(price);
+    }
+    public String getProductName() {
+        return productName;
+    }
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+    public double getPrice() {
+        return price;
+    }
+    public void setPrice(double price) {
+        if (price > 0) {
+            this.price = price;
+        } else {
+            System.out.println("Invalid price");
+        }
+    }
+    public static void main(String[] args) {
+        product p1 = new product("iphone", 150000);
+        System.out.println("Product Name: " + p1.getProductName());
+        System.out.println("Product Price: ₹" + p1.getPrice());
+        p1.setPrice(50000);
+        System.out.println("Updated Product Price: ₹" + p1.getPrice());
+    }
+}
