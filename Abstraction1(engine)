@@ -1,0 +1,36 @@
+package oops;
+abstract class vehicle{
+    abstract void startengine();
+    abstract void endengine();
+}
+class car extends vehicle{
+    @Override
+    void startengine(){
+        System.out.println("the car has started");
+    }
+
+    @Override
+    void endengine() {
+        System.out.println("the car has ended");
+    }
+}
+class bike extends vehicle{
+    @Override
+    void startengine(){
+        System.out.println("the bike has started.");
+    }
+    @Override
+    void endengine(){
+        System.out.println("the bike has stopped");
+    }
+}
+public class abstractionvehicle {
+    public static void main(String[] args) {
+        vehicle car=new car();
+        vehicle bike=new bike();
+        car.startengine();
+        bike.startengine();
+        car.endengine();
+        bike.endengine();
+    }
+}
